@@ -577,7 +577,7 @@ class ReleaseWorkflow:
         """
         for line in sys.stdin:
             line.rstrip()
-            m = re.search(r"/([a-z-]+)\s(.+)", line)
+            m = re.search(r"([a-z-]+)(?::\s?)(.+)", line)
             if not m:
                 continue
             command = m.group(1)
